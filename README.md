@@ -20,3 +20,8 @@ Contact Information
 
 Questions/Comments? - [labs@quantifiedself.com](mailto:labs@quantifiedself.com) and [@quantifiedself](http://www.twitter.com/quantifiedself)
 
+Copyright
+---------
+
+Copyright (c) 2014 Quantified Self labs. See [LICENSE](https://github.com/qslabs/Missing-Days-Visualization/blob/master/LICENSE) for details. 
+
