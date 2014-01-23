@@ -12,7 +12,7 @@
       <div class="large-12 columns">
         <h3>Quantified Self - Visualization Project</h3>
         <ul class="breadcrumbs">
-        <li><a href="/visproject">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li class="current"><a href="#">MEDITATION</a></li>
       </ul>
       </div>
@@ -25,7 +25,7 @@
 
     <div class="row">
       <div class="large-12 columns">
-        <div id="gary_chart"></div>
+        <div id="chart"></div>
       </div>
     </div>
 
@@ -56,13 +56,8 @@
         return /8|3|5|10/.test(--m)?30:m==1?(!(y%4)&&y%100)||!(y%400)?29:28:31;
       }
 
-      var svg0 = d3.select("#gary_chart").append("svg:svg")
+      var svg0 = d3.select("#chart").append("svg:svg")
             .attr({"width":1400,"height":600});
-      var svg1 = d3.select("#runkeeper_chart").append("svg:svg")
-            .attr({"width":1400,"height":600});
-      var svg2 = d3.select("#foursquare_chart").append("svg:svg")
-            .attr({"width":1400,"height":600});
-
 
       function chart() {
         var topText, bottomText, accessor;
@@ -72,7 +67,6 @@
             this.append("text").text(bottomText).attr("y", 240).attr("x", 0);
             this.append("text").text("(minutes)").attr("y", 260).attr("x", 0);
             var bigcaption = this.append("text").attr("class", "bigcaption").attr("x", 250).attr("y",330);
-
 
             var base = 400;
             var timeScale = d3.time.scale().range([100,970]);
@@ -159,7 +153,7 @@
         return my;
       }
 
-      d3.json('garys_meditation_data.json', function(data) {
+      d3.json('meditation_data.json', function(data) {
         var myChart = chart().topText("Skipped days")
                         .bottomText("Session")
                         .accessor("minutes");
