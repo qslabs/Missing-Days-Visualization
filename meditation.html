@@ -131,7 +131,7 @@
 
             this.selectAll(".time.axis").call(axis);
             var month_g = months.selectAll(".month").data(foo).enter().append("g").attr("class", "month")
-              .attr("transform", function(d) { console.log(d.key); return "translate(" + (timeScale(new Date(d.key))) + ",0)"; })
+              .attr("transform", function(d) { return "translate(" + (timeScale(new Date(d.key))) + ",0)"; })
             month_g.selectAll(".zeroes").data(function(d) { return d.missing_days }).enter().append("circle").attr("r",3)
               .attr("cy", function(d,i) { return 180 - i * 7} ).style("fill", "#BE1336").style("stroke", "#741E2C");
             month_g.append("rect").attr("class","bar").attr("width",8)
@@ -167,14 +167,6 @@
       });
 
     </script>
-    <!-- kk Google Analytics -->
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script>
-    <script type="text/javascript">
-    _uacct = "UA-71316-1";
-    urchinTracker();
-    </script>
-    <!-- kk-->
   </body>
 </html>
 
